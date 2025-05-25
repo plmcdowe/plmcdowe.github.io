@@ -1,0 +1,128 @@
+@font-face {
+  font-family: 'Cascadia Code Light';
+  src: url('fonts/CascadiaCodeLight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Century Gothic", sans-serif;
+  color: #000;
+  background-image: url("CircuitBoard2.jpg");
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* .sidebar {
+    width: 200px;
+    background-color: rgb(255 255 255 / 15%);
+    backdrop-filter: saturate(180%) blur(5px);
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .sidebar h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    background-color: #47423da9;
+    border: 2px solid #000;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+
+  .sidebar ul li {
+    margin-bottom: 10px;
+  }
+
+  .sidebar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.1em;
+    transition: color 0.3s;
+  }
+
+  .sidebar ul li a:hover {
+    color: #000000;
+  } */
+
+.content {
+  /* margin-right: 200px; */
+  padding-top: 20px;
+  padding-left: 400px;
+  /* padding-right: 400px; */
+  /* padding-left: 25%; */
+  /* padding-right: 25%; */
+  flex: 1;
+  background-color: rgb(255 255 255 / 15%);
+  backdrop-filter: saturate(180%) blur(5px);
+}
+
+/* Code blocks styling using Cascadia Code Light */
+pre, code {
+  font-family: 'Cascadia Code Light', Consolas, monospace;
+  background-color: #d1c5a6;
+  max-width: 50%;
+  padding-left: 10px;
+  padding-right: 10px;  
+  border-radius: 10px;
+  overflow-x: auto;  
+  margin-right: 20%;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+/* Styling for images to ensure responsiveness */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px 0;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+th {
+  background-color: #b9bdba;
+}
+tr:hover {background-color: #82a4f5;}
+
+/* Styling for document links (e.g., resume) */
+/* .document-link {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 8px 12px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #000;
+  transition: background-color 0.3s;
+}
+
+.document-link:hover {
+  background-color: #d0d0d0;
+} */
