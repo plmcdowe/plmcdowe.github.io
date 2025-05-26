@@ -23,7 +23,7 @@
 
 @media (prefers-color-scheme: light) {
   :where(body) {
-    --background-color: hsl(0 0% 100%);
+    --background-color: hsl(0, 0%, 85%);
     --text-color: hsl(0 0% 0%);
   }
 }
@@ -147,6 +147,12 @@ code pre {
   overflow-x: auto;
   border: 2px solid black;
   box-shadow: 0px 0px 5px 1px black;
+}
+
+#PDF {
+    width: 1000px;
+    height: 1250px;
+    zoom: 100%;
 }
 
 table, th, td {
