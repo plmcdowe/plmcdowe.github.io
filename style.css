@@ -21,6 +21,7 @@
   border: 2px transparent lightgray;
 }
 
+
 @media (prefers-color-scheme: light) {
   :where(body) {
     --background-color: hsl(0, 0%, 85%);
@@ -49,6 +50,80 @@ body {
   background-size: auto;
   color-scheme: light dark;
 }
+/**/
+/* background: */
+/* progress::-webkit-progress-bar {background-color: black; width: 100%;}
+progress {background-color: black;} */
+/**/
+/* value: */
+/* progress::-webkit-progress-value {background-color: blue !important;}
+progress::-moz-progress-bar {background-color: blue !important;}
+progress.red {color: red;}
+progress.orange {color: orangered;}
+progress.yellow {color: yellow;}
+progress.green {color: green;} */
+/**/
+
+
+progress {
+  color: black;
+  /* Firefox: Unfilled portion of the progress bar */
+  background: darkgrey;
+  line-height: 1px;
+  width: 150px;
+  height: 15px;
+  border: 2px solid whitesmoke;
+  border-radius: 5px;
+  overflow: hidden;    
+}
+/* Firefox: Filled portion of the progress bar */
+progress::-moz-progress-bar {
+    background: currentColor;
+}
+/**/
+/* Chrome & Safari: Unfilled portion of the progress bar */
+progress::-webkit-progress-bar {
+    background: darkgrey;
+}
+/* Chrome & Safari: Filled portion of the progress bar */
+progress::-webkit-progress-value {
+    background: currentColor;
+}
+/**/
+/* Easily change the color */
+progress.black {
+    color: black;
+}
+progress.red {
+    color: red;
+}
+progress.yellow {
+    color: yellow;
+}
+progress.green {
+    color: green;
+}
+
+/* .meter {
+  width: 250px;
+  background: darkgrey;
+  border-radius: 10px;
+  border: 2px solid white;
+  overflow: hidden;
+  height: 15px;
+  text-align: right;
+  justify-content: center;
+  font-size: 90%;
+}
+.meter span {
+  display: block;
+  height: 100%;
+  background: white;
+}
+.meter.black span { background: black; }
+.meter.red span { background: red; }
+.meter.yellow span { background: yellow; }
+.meter.green span { background: green; } */
 
 .container {
   display: flex;
