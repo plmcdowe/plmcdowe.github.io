@@ -4,16 +4,15 @@
   font-weight: normal;
   font-style: normal;
 }
-
+/* font-variant: small-caps; */
 :where(code) {
-  --code-text-color: hsl(0 0% 0%);
+  --code-text-color: hsla(0 0% 0%);
 }  
 :where(a) {
-  /* --link-text-color: hsla(38 78% 48% / 0.95); */
   --link-text-color: hsla(38 78% 48%);
 }
 :where(a:hover) {
-  --hover-text-color: hsl(228, 5%, 80%);
+  --hover-text-color: hsla(228 5% 80%);
 }
 :where(fieldset) {
   background-color: hsla(0 0% 40% / 0.25);
@@ -24,8 +23,9 @@
 
 @media (prefers-color-scheme: light) {
   :where(body) {
-    --background-color: hsl(0, 0%, 85%);
-    --text-color: hsl(0 0% 0%);
+    --background-color: hsla(0 0% 85%);
+    --text-color: hsla(0 0% 0%);
+    --bar-border: 2.5px solid black;
   }
 }
 
@@ -33,6 +33,9 @@
   :where(body) {
     --background-color: hsl(228, 5%, 15%);
     --text-color: hsl(228, 5%, 80%);
+    /* --bar-border: 2.5px solid hsl(240, 60%, 99%); */
+    --bar-border: 2.5px solid black;
+    --bar-back: hsl(240 36% 28.8%);
   }
 }
 
@@ -50,80 +53,52 @@ body {
   background-size: auto;
   color-scheme: light dark;
 }
-/**/
-/* background: */
-/* progress::-webkit-progress-bar {background-color: black; width: 100%;}
-progress {background-color: black;} */
-/**/
-/* value: */
-/* progress::-webkit-progress-value {background-color: blue !important;}
-progress::-moz-progress-bar {background-color: blue !important;}
-progress.red {color: red;}
-progress.orange {color: orangered;}
-progress.yellow {color: yellow;}
-progress.green {color: green;} */
-/**/
-
 
 progress {
   color: black;
   /* Firefox: Unfilled portion of the progress bar */
-  background: darkgrey;
+  background: var(--bar-back);
   line-height: 1px;
   width: 150px;
-  height: 15px;
-  border: 2px solid whitesmoke;
-  border-radius: 5px;
+  height: 12px;
+  border-radius: 3px;
   overflow: hidden;    
 }
 /* Firefox: Filled portion of the progress bar */
 progress::-moz-progress-bar {
     background: currentColor;
 }
-/**/
 /* Chrome & Safari: Unfilled portion of the progress bar */
 progress::-webkit-progress-bar {
-    background: darkgrey;
+    background: var(--bar-back);
 }
 /* Chrome & Safari: Filled portion of the progress bar */
 progress::-webkit-progress-value {
     background: currentColor;
 }
-/**/
-/* Easily change the color */
 progress.black {
     color: black;
+    border: var(--bar-border);
+    box-shadow: -.05em -.05em .1em black;
 }
 progress.red {
-    color: red;
+    color: hsla(0, 95%, 35%, 1);
+    box-shadow: -.05em -.05em .1em hsla(0, 95%, 35%, 1);
+    border: var(--bar-border);
 }
 progress.yellow {
-    color: yellow;
+    color: hsla(45, 100%, 47%, 1);
+    border: var(--bar-border);
+    box-shadow: -.05em -.05em .1em hsla(45, 100%, 47%, 1);
+      /* 1px 0.5px hsla(51, 95%, 45%, 1); */
+      /* -0.05em -0.05em 0.2em olive;     */
 }
 progress.green {
-    color: green;
+    color: hsla(116, 65%, 45%, 1);
+    border: var(--bar-border);
+    box-shadow: -.05em -.05em .1em hsla(116, 65%, 45%, 1);
+    /* border: 2px solid green; */
 }
-
-/* .meter {
-  width: 250px;
-  background: darkgrey;
-  border-radius: 10px;
-  border: 2px solid white;
-  overflow: hidden;
-  height: 15px;
-  text-align: right;
-  justify-content: center;
-  font-size: 90%;
-}
-.meter span {
-  display: block;
-  height: 100%;
-  background: white;
-}
-.meter.black span { background: black; }
-.meter.red span { background: red; }
-.meter.yellow span { background: yellow; }
-.meter.green span { background: green; } */
 
 .container {
   display: flex;
@@ -148,7 +123,6 @@ progress.green {
   box-shadow: 0px 0px 10px 2px goldenrod;
   font-size: small;
 }
-
 .content2 {
   flex: 1;
   margin: auto;
@@ -157,7 +131,7 @@ progress.green {
   min-height: 100vh;
   background-color: var(--background-color);
   border-radius: 10px;
-  border: 5px solid black;
+  border: 3px solid black;
   padding-top: 10px;
   padding-left: 15px;
   padding-right: 15px;
@@ -170,24 +144,36 @@ progress.green {
 }
 .c2items ol {
   list-style-position: outside;
-  padding-left: 15px;
+  padding-left: 20px;
+  font-size: large;
 }
+/* OL LI controlls all text on page and overrides below */
+.c2items ol li {
+  list-style-position: outside;
+  padding-left: 5px;
+}
+/* OL UL controls all text inside the UL */
 .c2items ol ul {
   list-style-position: outside;
   list-style-type: "\22B6";
+  font-size: medium;
+  /*     \top\ ?\bot\indent UL */
   padding: 5px 0 5px 20px;
 }
 .c2items ol ul li {
-  padding: 5px 0 5px 5px;  
+  /*     \btn\ ?\bot\indent UL */
+  padding: 5px 0 5px 10px;  
 }
 .c2items ol ul ul {
   list-style-position: outside;
   list-style-type: "\22F1";
-  /* list-style-type: "\22B7"; */
+  font-size: small;
+  /*     \top\ ?\bot\indent UL */
   padding: 5px 0 5px 30px;
 }
 .c2items ol ul ul li {
-  padding: 5px 0 5px 5px;
+  /*     \top\ ?\bot\indent UL LI */
+  padding: 5px 0 10px 10px;
 }
 
 .topnav ul {
@@ -209,6 +195,7 @@ progress.green {
   color: black;
 }
 
+/* CODE Block */
 code pre {
   margin-left: 5px;
   font-family: 'Cascadia Code Light';
@@ -223,13 +210,17 @@ code pre {
   border: 2px solid black;
   box-shadow: 0px 0px 5px 1px black;
 }
+/**/
 
+/* PDF */
 #PDF {
     width: 1000px;
     height: 1250px;
     zoom: 100%;
 }
+/**/
 
+/* Table */
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
@@ -242,18 +233,19 @@ th {
   background-color: #b9bdba;
 }
 tr:hover {background-color: #82a4f5;}
+/**/
 
+/* LINK style*/
 a{
   color: var(--link-text-color);
 }
-
 a:hover {
   color: var(--hover-text-color);
 }
-
 a:active {
   color: purple;
 }
+/**/
 
 /* .toggle {
   display: inline-flex;
