@@ -20,7 +20,6 @@
   border: 2px transparent lightgray;
 }
 
-
 @media (prefers-color-scheme: light) {
   :where(body) {
     --background-color: hsla(0 0% 85%);
@@ -35,7 +34,8 @@
     --text-color: hsl(228, 5%, 80%);
     /* --bar-border: 2.5px solid hsl(240, 60%, 99%); */
     --bar-border: 2.5px solid black;
-    --bar-back: hsl(240 36% 28.8%);
+    /* --bar-back: hsl(240 36% 28.8%); */
+    --bar-back: hsl(228, 5%, 80%);
   }
 }
 
@@ -54,11 +54,15 @@ body {
   color-scheme: light dark;
 }
 
+summary {
+  padding: 5px;
+}
+
 progress {
   color: black;
   /* Firefox: Unfilled portion of the progress bar */
   background: var(--bar-back);
-  line-height: 1px;
+  /* line-height: 1px; */
   width: 150px;
   height: 12px;
   border-radius: 3px;
@@ -80,24 +84,61 @@ progress.black {
     color: black;
     border: var(--bar-border);
     box-shadow: -.05em -.05em .1em black;
+
+    /* box-shadow: 0.1em 0.1em  black; */
+
+    /* box-shadow: -0.1em -0.1em  black;     */
+
+    /* box-shadow: -.05em -.05em .1em black;     */
+
+    box-shadow: 
+      -0.1em 0.1em 0.2em  midnightblue,
+      -0.2em -0.05em 0.3em darkgrey;
 }
 progress.red {
     color: hsla(0, 95%, 35%, 1);
-    box-shadow: -.05em -.05em .1em hsla(0, 95%, 35%, 1);
     border: var(--bar-border);
+
+    /* box-shadow: 0.1em 0.1em  hsla(0, 95%, 35%, 1); */
+
+    /* box-shadow: -0.1em -0.1em  hsla(0, 95%, 35%, 1);     */
+
+    /* box-shadow: -.05em -.05em .1em hsla(0, 95%, 35%, 1);     */
+
+    box-shadow: 
+      /* -0.1em 0.1em 0.2em  hsla(0, 95%, 35%, 1), */
+      -0.1em 0.1em 0.2em  hsla(0, 95%, 35%, 80%),
+      -0.2em -0.05em 0.3em hsla(0, 95%, 35%, 1);    
 }
 progress.yellow {
     color: hsla(45, 100%, 47%, 1);
     border: var(--bar-border);
-    box-shadow: -.05em -.05em .1em hsla(45, 100%, 47%, 1);
-      /* 1px 0.5px hsla(51, 95%, 45%, 1); */
-      /* -0.05em -0.05em 0.2em olive;     */
+
+    /* box-shadow: 0.1em 0.1em  hsla(45, 100%, 47%, 1); */    
+
+    /* box-shadow: -0.1em -0.1em  hsla(45, 100%, 47%, 1); */
+
+    /* box-shadow: -.05em -.05em .1em hsla(45, 100%, 47%, 1); */
+
+    box-shadow: 
+      /* -0.1em 0.1em 0.2em  hsla(45, 100%, 47%, 1), */
+      -0.1em 0.1em 0.2em  hsla(45, 100%, 32%, 0.8),
+      -0.2em -0.05em 0.3em hsla(45, 100%, 47%, 1);
 }
 progress.green {
     color: hsla(116, 65%, 45%, 1);
     border: var(--bar-border);
-    box-shadow: -.05em -.05em .1em hsla(116, 65%, 45%, 1);
-    /* border: 2px solid green; */
+
+    /* box-shadow: 0.1em 0.1em  hsla(116, 65%, 45%, 1); */
+
+    /* box-shadow: -0.1em -0.1em  hsla(116, 65%, 45%, 1); */
+
+    /* box-shadow: -.05em -.05em .1em hsla(116, 65%, 45%, 1); */    
+
+    box-shadow: 
+      /* -0.1em 0.1em 0.2em  hsla(116, 65%, 45%, 1), */
+      -0.1em 0.1em 0.2em  darkgreen,
+      -0.2em -0.05em 0.3em hsla(116, 65%, 45%, 1);
 }
 
 .container {
@@ -185,7 +226,8 @@ progress.green {
 }
 .topnav ul li a {
   text-decoration: none;
-  color: #ffffff;
+  /* color: #ffffff; */
+  color: black;
   font-size: x-large;
   padding: 0.25em 0.5em;
   border-radius: 5px;
