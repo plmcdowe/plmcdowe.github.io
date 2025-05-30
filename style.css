@@ -20,23 +20,40 @@
   border: 2px transparent lightgray;
 }
 
-@media (prefers-color-scheme: light) {
+i.fa {
+  font-size: 1em;
+}
+
+i.fa.fa-link {
+  /* transform: rotate(-0.12turn); */
+  /* transform: rotate(-0.15turn); */
+  transform: rotate(-0.25turn);
+}
+
+/* @media (prefers-color-scheme: light) {
   :where(body) {
     --background-color: hsla(0 0% 85%);
     --text-color: hsla(0 0% 0%);
     --bar-border: 2.5px solid black;
   }
-}
+} */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :where(body) {
     --background-color: hsl(228, 5%, 15%);
     --text-color: hsl(228, 5%, 80%);
-    /* --bar-border: 2.5px solid hsl(240, 60%, 99%); */
     --bar-border: 2.5px solid black;
-    /* --bar-back: hsl(240 36% 28.8%); */
     --bar-back: hsl(228, 5%, 80%);
   }
+} */
+
+:where(body) {
+  --background-color: hsl(228, 5%, 15%);
+  --text-color: hsl(228, 5%, 80%);
+  /* --bar-border: 2.5px solid hsl(240, 60%, 99%); */
+  --bar-border: 2.5px solid black;
+  /* --bar-back: hsl(240 36% 28.8%); */
+  --bar-back: hsl(228, 5%, 80%);
 }
 
 * {
@@ -49,13 +66,18 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);  
   font-family: "Century Gothic", sans-serif;
-  background-image: url("CircuitBoard2.jpg");
+  background-image: url("assets/CircuitBoard2.jpg");
   background-size: auto;
   color-scheme: light dark;
 }
 
 summary {
-  padding: 5px;
+  padding-top: 5px;
+  font-size: small;
+}
+
+details {
+  font-size: small;
 }
 
 progress {
@@ -64,9 +86,12 @@ progress {
   background: var(--bar-back);
   /* line-height: 1px; */
   width: 150px;
-  height: 12px;
+  /* height: 12px; */
+  height: 1em;
   border-radius: 3px;
-  overflow: hidden;    
+  overflow: hidden;
+  margin-right: 10px;
+  /* margin-left: 10px; */
 }
 /* Firefox: Filled portion of the progress bar */
 progress::-moz-progress-bar {
@@ -183,38 +208,34 @@ progress.green {
   margin: auto;
   max-width: fit-content;
 }
-.c2items ol {
-  list-style-position: outside;
-  padding-left: 20px;
-  font-size: large;
-}
-/* OL LI controlls all text on page and overrides below */
-.c2items ol li {
+
+.ol-step {
   list-style-position: outside;
   padding-left: 5px;
+  font-size: xx-large;
 }
-/* OL UL controls all text inside the UL */
-.c2items ol ul {
+.ul-step {
   list-style-position: outside;
   list-style-type: "\22B6";
+  font-size: x-large;
+}
+.ul-step a {
+  font-size: x-large;
+}
+.ul-step p {
   font-size: medium;
-  /*     \top\ ?\bot\indent UL */
-  padding: 5px 0 5px 20px;
 }
-.c2items ol ul li {
-  /*     \btn\ ?\bot\indent UL */
-  padding: 5px 0 5px 10px;  
-}
-.c2items ol ul ul {
+
+.ul-substep {
   list-style-position: outside;
-  list-style-type: "\22F1";
-  font-size: small;
-  /*     \top\ ?\bot\indent UL */
-  padding: 5px 0 5px 30px;
+  list-style-type: "\22F1";  
+  font-size: x-large;
 }
-.c2items ol ul ul li {
-  /*     \top\ ?\bot\indent UL LI */
-  padding: 5px 0 10px 10px;
+.ul-substep a {
+  font-size: x-large;
+}
+.ul-substep p {
+  font-size: medium;
 }
 
 .topnav ul {
@@ -263,7 +284,7 @@ code pre {
 /**/
 
 /* Table */
-table, th, td {
+table th td {
   border: 1px solid black;
   border-collapse: collapse;
   padding-top: 5px;
@@ -280,14 +301,22 @@ tr:hover {background-color: #82a4f5;}
 /* LINK style*/
 a{
   color: var(--link-text-color);
+  text-decoration: none;
 }
 a:hover {
   color: var(--hover-text-color);
+  text-decoration: none;
 }
 a:active {
   color: purple;
+  text-decoration: none;
 }
 /**/
+
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 /* .toggle {
   display: inline-flex;
