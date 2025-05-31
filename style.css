@@ -211,12 +211,18 @@ progress.green {
 
 .ol-step {
   list-style-position: outside;
+  margin-left: 30px;
   padding-left: 5px;
+  padding-bottom: 5px;
   font-size: xx-large;
 }
 .ul-step {
   list-style-position: outside;
   list-style-type: "\22B6";
+  margin-left: 40px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  padding-bottom: 10px;
   font-size: x-large;
 }
 .ul-step a {
@@ -228,7 +234,9 @@ progress.green {
 
 .ul-substep {
   list-style-position: outside;
-  list-style-type: "\22F1";  
+  list-style-type: "\22F1";
+  margin-left: 65px;
+  padding-left: 10px;  
   font-size: x-large;
 }
 .ul-substep a {
@@ -236,6 +244,10 @@ progress.green {
 }
 .ul-substep p {
   font-size: medium;
+}
+
+details {
+  padding-bottom: 10px;
 }
 
 .topnav ul {
