@@ -30,6 +30,9 @@
   :where(.topnav ul li a) {
     --topnav-size-a: medium;  
   }
+  :where(.indexh2) {
+    --h2-size: medium;
+  }
 }
 @media only screen and (min-width: 1080px) {
   :where(.ol-step) {
@@ -55,6 +58,9 @@
   } 
   :where(.topnav ul li a) {
     --topnav-size-a: xx-large;  
+  }  
+  :where(.indexh2) {
+    --h2-size: xx-large;
   }  
 }
 
@@ -267,17 +273,16 @@ progress.green {
 
 .ol-step {
   list-style-position: outside;
-  margin-left: 30px;
+  margin-left: 1%;
   padding-left: 5px;
   padding-top: 5px;
   padding-bottom: 5px;
-  /* font-size: xx-large; */
   font-size: var(--ol-step-size);
 }
 .ul-step {
   list-style-position: outside;
   list-style-type: "\22B6";
-  margin-left: 40px;
+  margin-left: 2%;
   padding-left: 10px;
   padding-top: 5px;
   padding-bottom: 10px;
@@ -293,7 +298,9 @@ progress.green {
 .ul-substep {
   list-style-position: outside;
   list-style-type: "\22F1";
-  margin-left: 70px;
+  /* margin-left: 70px; */
+  margin-left: 50px;
+  /* margin-left: 3%; */
   padding-left: 10px;  
   font-size: var(--ul-substep-size);
   padding-bottom: 10px;
@@ -308,6 +315,10 @@ progress.green {
 
 details {
   padding-bottom: 10px;
+}
+
+.indexh2 {
+  font-size: var(--h2-size);
 }
 
 .topnav ul {
