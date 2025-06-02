@@ -10,46 +10,52 @@
     --ol-step-size: medium;
   }
   :where(.ul-step) {
-    --ol-step-size: small;
+    --ul-step-size: small;
   }  
   :where(.ul-step a) {
-    font-size: medium;
+    --ul-step-size-a: medium;
   }
   :where(.ul-step p) {
-    font-size: small;
+    --ul-step-size-p: small;
   }  
   :where(.ul-substep) {
-  font-size: medium;
+    --ul-substep-size: medium;
   }
   :where(.ul-substep a) {
-    font-size: small;
+    --ul-substep-size-a: small;
   }
   :where(.ul-substep p) {
-    font-size: x-small;
+    --ul-substep-size-p: x-small;
   }  
+  :where(.topnav ul li a) {
+    --topnav-size-a: medium;  
+  }
 }
 @media only screen and (min-width: 1080px) {
   :where(.ol-step) {
     --ol-step-size: xx-large;
   }
   :where(.ul-step) {
-    --ol-step-size: x-large;
+    --ul-step-size: x-large;
   }  
   :where(.ul-step a) {
-    font-size: x-large;
+    --ul-step-size-a: x-large;
   }
   :where(.ul-step p) {
-    font-size: medium;
+    --ul-step-size-p: medium;
   }  
   :where(.ul-substep) {
-    font-size: x-large;
+    --ul-substep-size: x-large;
   }
   :where(.ul-substep a) {
-    font-size: x-large;
+    --ul-substep-size-a: x-large;
   }
   :where(.ul-substep p) {
-    font-size: medium;
+    --ul-substep-size-p: medium;
   } 
+  :where(.topnav ul li a) {
+    --topnav-size-a: xx-large;  
+  }  
 }
 
 /* font-variant: small-caps; */
@@ -275,13 +281,13 @@ progress.green {
   padding-left: 10px;
   padding-top: 5px;
   padding-bottom: 10px;
-  font-size: x-large;
+  font-size: var(--ul-step-size);
 }
 .ul-step a {
-  font-size: x-large;
+  font-size: var(--ul-step-size-a);
 }
 .ul-step p {
-  font-size: medium;
+  font-size: var(--ul-step-size-p);
 }
 
 .ul-substep {
@@ -289,15 +295,15 @@ progress.green {
   list-style-type: "\22F1";
   margin-left: 70px;
   padding-left: 10px;  
-  font-size: x-large;
+  font-size: var(--ul-substep-size);
   padding-bottom: 10px;
 }
 .ul-substep a {
-  font-size: x-large;
+  font-size: var(--ul-substep-size-a);
   /* padding-bottom: 10px; */
 }
 .ul-substep p {
-  font-size: medium;
+  font-size: var(--ul-substep-size-p);
 }
 
 details {
@@ -308,7 +314,6 @@ details {
   list-style: none;
   display: flex;
   justify-content: center;
-  
   gap: 2em;
   /* margin-top: 0.5em; */
 }
@@ -318,7 +323,7 @@ details {
   /* color: #ffffff; */
   color: hsl(228, 5%, 80%);
   font-weight: bolder;
-  font-size: xx-large;
+  font-size: var(--topnav-size-a);
   padding: 0.25em 0.5em;
   border-radius: 5px;
 }
