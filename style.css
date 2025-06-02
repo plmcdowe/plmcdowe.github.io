@@ -4,6 +4,54 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@media only screen and (max-width: 600px) {
+  :where(.ol-step) {
+    --ol-step-size: medium;
+  }
+  :where(.ul-step) {
+    --ol-step-size: small;
+  }  
+  :where(.ul-step a) {
+    font-size: medium;
+  }
+  :where(.ul-step p) {
+    font-size: small;
+  }  
+  :where(.ul-substep) {
+  font-size: medium;
+  }
+  :where(.ul-substep a) {
+    font-size: small;
+  }
+  :where(.ul-substep p) {
+    font-size: x-small;
+  }  
+}
+@media only screen and (min-width: 1080px) {
+  :where(.ol-step) {
+    --ol-step-size: xx-large;
+  }
+  :where(.ul-step) {
+    --ol-step-size: x-large;
+  }  
+  :where(.ul-step a) {
+    font-size: x-large;
+  }
+  :where(.ul-step p) {
+    font-size: medium;
+  }  
+  :where(.ul-substep) {
+    font-size: x-large;
+  }
+  :where(.ul-substep a) {
+    font-size: x-large;
+  }
+  :where(.ul-substep p) {
+    font-size: medium;
+  } 
+}
+
 /* font-variant: small-caps; */
 :where(code) {
   --code-text-color: hsla(0 0% 0%);
@@ -86,7 +134,8 @@ progress {
   /* Firefox: Unfilled portion of the progress bar */
   background: var(--bar-back);
   /* line-height: 1px; */
-  width: 150px;
+  /* width: 150px; */
+  width: 10%;
   /* height: 12px; */
   height: 1em;
   border-radius: 3px;
@@ -216,7 +265,8 @@ progress.green {
   padding-left: 5px;
   padding-top: 5px;
   padding-bottom: 5px;
-  font-size: xx-large;
+  /* font-size: xx-large; */
+  font-size: var(--ol-step-size);
 }
 .ul-step {
   list-style-position: outside;
