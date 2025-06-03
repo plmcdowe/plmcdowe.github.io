@@ -5,7 +5,7 @@
   font-style: normal;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1079px) {
   :where(.ol-step) {
     --ol-step-size: medium;
   }
@@ -33,6 +33,12 @@
   :where(.indexh2) {
     --h2-size: medium;
   }
+  :where(details) {
+    --details-size: x-small;
+  }  
+  :where(summary) {
+    --summary-size: x-small;
+  }  
 }
 @media only screen and (min-width: 1080px) {
   :where(.ol-step) {
@@ -62,6 +68,12 @@
   :where(.indexh2) {
     --h2-size: xx-large;
   }  
+  :where(details) {
+    --details-size: small;
+  }  
+  :where(summary) {
+    --summary-size: small;
+  }
 }
 
 /* font-variant: small-caps; */
@@ -315,6 +327,11 @@ progress.green {
 
 details {
   padding-bottom: 10px;
+  font-size: var(--details-size);
+}
+
+summary {
+  font-size: var(--summary-size);
 }
 
 .indexh2 {
