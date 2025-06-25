@@ -276,7 +276,7 @@ progress.green {
 .content2 {
   flex: 1;
   margin: auto;
-  min-width: fit-content;
+  /* min-width: fit-content; */
   max-width: 85%;
   min-height: 100vh;
   background-color: var(--background-color);
@@ -290,12 +290,12 @@ progress.green {
 }
 .c2items {
   margin: auto;
-  max-width: fit-content;
+  /* max-width: fit-content; */
 }
 
 .ol-step {
   list-style-position: outside;
-  margin-left: 2%;
+  margin-left: 3%;
   padding-left: 5px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -304,7 +304,7 @@ progress.green {
 .ul-step {
   list-style-position: outside;
   list-style-type: "\22B6";
-  margin-left: 3%;
+  margin-left: 4%;
   padding-left: 10px;
   padding-top: 5px;
   padding-bottom: 10px;
@@ -321,8 +321,8 @@ progress.green {
   list-style-position: outside;
   list-style-type: "\22F1";
   /* margin-left: 70px; */
-  margin-left: 50px;
-  /* margin-left: 3%; */
+  /* margin-left: 50px; */
+  margin-left: 5%;
   padding-left: 10px;  
   font-size: var(--ul-substep-size);
   padding-bottom: 10px;
